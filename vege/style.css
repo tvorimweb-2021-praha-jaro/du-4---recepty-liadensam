@@ -37,3 +37,165 @@ body {
 /* ------------------------------- */
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
+
+
+/* podbarvení během ladění *
+* {
+    background-color: hsla(0 50% 50% / 0.2);
+}
+*/
+
+.recept {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  min-height: 90px;
+  max-width: 1200px;
+  padding: 0.5rem;
+  background-image:
+      /* moderní zápis HSLA, starší a stále platný: hsla(0, 0%, 0%, 0.2)*/
+      linear-gradient(hsla(0 0% 0% / 0.3), hsla(0 0% 0% / 0.3)),
+      var(--bg-recept);
+  background-position: center, center;
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  border: 1px solid #fff;
+  color: #fff;
+  text-shadow: 0 0 4px hsla(0 0% 0% / 0.9);
+}
+
+.recept-nazev {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+
+.recept-hlavni {
+  --bg-recept: url('images/salat.jpg');
+  min-height: 200px;
+  margin: auto;
+}
+
+.hlavni-nazev{
+  font-size: 1.75rem;
+}
+
+.recept-chlebicek {
+  --bg-recept: url('images/chlebicek.jpg');
+}
+.recept-cizrna {
+  --bg-recept: url('images/cizrna.jpg');
+}
+.recept-tacos {
+  --bg-recept: url('images/tacos.jpg');
+}
+.recept-burger {
+  --bg-recept: url('images/burger.jpg');
+}
+
+
+.recept-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recept-rubrika, .recept-komentare{
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+
+
+
+
+/* ----- min-width: 480px -------- */
+@media screen and (min-width: 480px) {
+.male-recepty{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recept{
+  min-height: 150px;
+  flex-basis: 50%;
+  padding: 1.25rem;
+}
+
+.recept-hlavni{
+  min-height: 250px;
+}
+
+.recept-nazev{
+  font-size: 1.5rem;
+}
+
+.hlavni-nazev{
+  font-size: 2rem;
+}
+
+.recept-chlebicek{
+  order: 1;
+}
+
+.recept-cizrna{
+  order: 3;
+}
+
+.recept-tacos{
+  order: 2;
+}
+
+.recept-burger{
+  order: 4;
+}
+
+}
+
+
+
+/* ----- min-width: 860px -------- */
+@media screen and (min-width: 860px){
+.main{
+  display: flex;
+}
+
+.male-recepty{
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+.recept{
+  min-height: 200px;
+}
+
+.recept-hlavni{
+  min-height: 400px;
+}
+
+.recept-nazev{
+  font-size: 1.75rem;
+}
+
+.hlavni-nazev{
+  font-size: 3rem;
+}
+
+.recept-chlebicek{
+  order: 1;
+}
+
+.recept-cizrna{
+  order: 3;
+}
+
+.recept-tacos{
+  order: 2;
+}
+
+.recept-burger{
+  order: 4;
+}
+  
+}
